@@ -18,7 +18,7 @@ $('document').ready(function(){
 		});
 
 	$('#button_ido').click(function(){
-		window.location.replace("https://el.aegeanair.com/");
+		window.location.replace("https://en.wikipedia.org/wiki/Prague#/media/File:Sunrise_in_Prague.jpg");
 	})
 
 	$('#button_idont').click(function(){
