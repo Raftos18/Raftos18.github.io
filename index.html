@@ -2,6 +2,9 @@
 <html>
 
 <body>
+    <header>
+        <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js'></script>
+    </header>
     <h1>Wordle Cr4CK3r</h1>
     <p>Want to know the word? Just set the date!</p>
     <input id='date' type="date">
@@ -12,10 +15,24 @@
             if (date) {
                 date = new Date(date);
                 let crackedWord = Da(date);
-                reveal = `The word is for ${date.toLocaleDateString()} is: ${crackedWord}`
-                alert(reveal);
+                reveal = `The word is for ${date.toLocaleDateString('ell')} is: ${crackedWord}`
+                Swal.fire({
+                    title: reveal,
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("https://thumbs.gfycat.com/AccurateAgreeableDairycow-max-1mb.gif")
+                    left top
+                    no-repeat`
+                });
             } else {
-                alert('Please select a date!')
+                Swal.fire(
+                    'Error',
+                    'Please select a date!',
+                    'error'
+                );
             }
         }
 
